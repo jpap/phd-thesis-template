@@ -205,18 +205,18 @@
 						\vspace{1cm}
 					ORCID: {\@orcid} \par
 						\vspace{3cm}
-					Submitted in total fulfilment of the requirements of the degree of \par
-					\bigskip
-					{\LARGE Doctor of Philosophy} \par
+                    Doctor of Philosophy \par
+					\vspace{2cm}
+				{\@submissionmonth} {\@submissionyear} \par
+					\vspace{1cm}
+				{\@department} \par
+				{\@university} \par
+
+					Submitted in total fulfilment of the requirements of the degree Doctor of Philosophy \par
 				}
 					\vspace{2cm}
 				%\includegraphics[height=3cm]{\@univlogofile} \par
 					\bigskip
-				{\@department} \par
-				{\@university} \par
-					\vspace{2cm}
-				{\@submissionmonth} {\@submissionyear} \par
-					\vspace{1cm}
 				\ifx\archivalpapernote\undefined
 					{\footnotesize
 						Produced on archival quality paper.
@@ -284,6 +284,31 @@
 	\vfill\null
 }
 
+%%
+%% Declaration
+%%
+%%  See: http://www.sgs.unimelb.edu.au/phd/enrolcandid/phdhbk/phdthesis/order.html
+%%
+
+\newcommand{\makedeclaration}{%
+	\chapter*{Declaration}
+	
+	This is to certify that
+	\begin{enumerate}
+		%\item the thesis comprises only my original work towards the PhD except where indicated in the Preface,
+		\item the thesis comprises only my original work towards the PhD,
+		\item due acknowledgement has been made in the text to all other material used,
+		\item the thesis is less than 100,000 words in length, exclusive of tables, maps, bibliographies and appendices. 
+	\end{enumerate}
+	\vspace{5cm}
+	% Ideally, this length should be changed so the line
+	% is symmetrically spaced with the text beneath it.
+	\underline{\hspace{7.52cm}} \par
+	{\@author}, {\@submissionmonth} {\@submissionyear} \par
+	\vfill\null
+}
+
+
 
 %%
 %% Preface
@@ -317,31 +342,6 @@
 \newenvironment{acknowledgements}{%
 	\chapter*{Acknowledgements}
 }{%
-	\vfill\null
-}
-
-
-%%
-%% Declaration
-%%
-%%  See: http://www.sgs.unimelb.edu.au/phd/enrolcandid/phdhbk/phdthesis/order.html
-%%
-
-\newcommand{\makedeclaration}{%
-	\chapter*{Declaration}
-	
-	This is to certify that
-	\begin{enumerate}
-		%\item the thesis comprises only my original work towards the PhD except where indicated in the Preface,
-		\item the thesis comprises only my original work towards the PhD,
-		\item due acknowledgement has been made in the text to all other material used,
-		\item the thesis is less than 100,000 words in length, exclusive of tables, maps, bibliographies and appendices. 
-	\end{enumerate}
-	\vspace{5cm}
-	% Ideally, this length should be changed so the line
-	% is symmetrically spaced with the text beneath it.
-	\underline{\hspace{7.52cm}} \par
-	{\@author}, {\@submissionmonth} {\@submissionyear} \par
 	\vfill\null
 }
 
