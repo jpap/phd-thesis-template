@@ -161,6 +161,9 @@
 %% Custom commands
 %%
 
+% Set the ORCID
+\newcommand{\orcid}[1]{\def\@orcid{#1}}
+
 % Set the department
 \newcommand{\department}[1]{\def\@department{#1}}
 
@@ -198,7 +201,9 @@
 				{\Huge\bfseries\smallcapstitle {\@title} \par}
 					\vspace{1cm}
 				{\Large
-					{\@author} \par
+					{\@author} \par 
+						\vspace{1cm}
+					ORCID: {\@orcid} \par
 						\vspace{3cm}
 					Submitted in total fulfilment of the requirements of the degree of \par
 					\bigskip
