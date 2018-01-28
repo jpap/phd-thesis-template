@@ -41,11 +41,11 @@
 		% Author declaration
 		\makedeclaration
 
-		% Acknowledgements
-		\input{acknowledgements}
-
 		% Preface
 		\input{preface}
+
+		% Acknowledgements
+		\input{acknowledgements}
 
 		% Dedications...
 		\input{dedication}
@@ -85,27 +85,27 @@
 			\input{chapter-6}
 			\input{chapter-7}
 
+                \input{part-3}
+
+                        \input{chapter-8}
+                        \input{chapter-9}
+                        \input{chapter-10}
+
 		% Conclusion
-	   \input{chapter-8}
+	   \input{chapter-11}
 
 	\end{mainmatter}
 
 	%%
-	%% Appendix
-	%%
-	\begin{appendix}
-
-		\input{appendix}
-
-	\end{appendix}
-
-	%%
 	%% Bibliography
 	%%
+
+	\addcontentsline{toc}{chapter}{References}
 	\begin{backmatter}
 
-		\chapter*{\bibname}%
-		\markboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+		\chapter*{References}%
+		%\chapter*{\bibname}%
+		%\markboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
 		%
 		% Uncomment the following line to produce a
 		% bibliography list of all entries in the bib database
@@ -113,12 +113,27 @@
 		%
 		\bibliography{%
 			% Place your bib database files here, for example:
+			bib/test%
 			%bib/strings,%
 			%bib/wireless,%
 			%bib/dsl,%
 			%bib/selfpubs%
 		}
 	\end{backmatter}
+	
+	%%
+	%% Appendix
+	%%
+
+	\begin{appendix}
+
+                \input{appendixA}
+                \input{appendixB}
+                \input{appendixC}
+
+	\end{appendix}
+
 
 \end{document}
 %... and of four years work! :-)
+
