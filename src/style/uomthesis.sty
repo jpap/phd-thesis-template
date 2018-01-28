@@ -161,6 +161,9 @@
 %% Custom commands
 %%
 
+% Set the ORCID
+\newcommand{\orcid}[1]{\def\@orcid{#1}}
+
 % Set the department
 \newcommand{\department}[1]{\def\@department{#1}}
 
@@ -196,22 +199,23 @@
 			\begin{center}
 				\large
 				{\Huge\bfseries\smallcapstitle {\@title} \par}
-					\vspace{1cm}
+					\vspace{3cm}
 				{\Large
 					{\@author} \par
-						\vspace{3cm}
-					Submitted in total fulfilment of the requirements of the degree of \par
+					{\small ORCID: {\@orcid}} \par
+						\vspace{2cm}
 					\bigskip
 					{\LARGE Doctor of Philosophy} \par
 				}
 					\vspace{2cm}
 				%\includegraphics[height=3cm]{\@univlogofile} \par
 					\bigskip
+				{\@submissionmonth} {\@submissionyear} \par
+					\vspace{1cm}
 				{\@department} \par
 				{\@university} \par
 					\vspace{2cm}
-				{\@submissionmonth} {\@submissionyear} \par
-					\vspace{1cm}
+					Submitted in total fulfilment of the requirements\\ of the degree of Doctor of Philosophy \par
 				\ifx\archivalpapernote\undefined
 					{\footnotesize
 						Produced on archival quality paper.
@@ -226,25 +230,6 @@
 			\vfil\null
 	}
 
-	%%
-	%% Copyright notice
-	%%
-   \newpage
-	{
-		% Title page has no headings
-		\thispagestyle{empty}
-		% Use single spacing
-		\singlespacing
-			\vfill\null
-		   \vspace{0.75\textheight}
-			\begin{center}
-				\Large
-					Copyright \copyright\ {\@submissionyear}\ {\@author} \par
-			\end{center}
-			\bigskip
-				All rights reserved.  No part of the publication may be reproduced in any form by print, photoprint, microfilm or any other means without written permission from the author.
-			\vfil\null
-	}
 	
 	% Start the footnote counter
 	\setcounter{footnote}{0}
@@ -327,8 +312,8 @@
 	
 	This is to certify that
 	\begin{enumerate}
-		%\item the thesis comprises only my original work towards the PhD except where indicated in the Preface,
-		\item the thesis comprises only my original work towards the PhD,
+		\item the thesis comprises only my original work towards the PhD except where indicated in the preface,
+		%\item the thesis comprises only my original work towards the PhD,
 		\item due acknowledgement has been made in the text to all other material used,
 		\item the thesis is less than 100,000 words in length, exclusive of tables, maps, bibliographies and appendices. 
 	\end{enumerate}
@@ -518,3 +503,4 @@
 	% Set up the header to be the title name
    \markright{#1}%
 }
+
